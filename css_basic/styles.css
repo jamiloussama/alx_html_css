@@ -12,8 +12,19 @@ main {
 article {
   flex: 2;
   overflow-y: auto;
+  background-color: rgb(195, 216, 234);
 }
 aside {
   flex: 1;
   overflow-y: auto;
+  background-color: rgb(234, 220, 195);
+}
+
+header, header a{
+    background-color: rgb(21, 36, 112);
+    color: #fff;
+}
+footer, footer a{
+    background-color: rgb(61, 61, 61);
+    color: #fff;
 }

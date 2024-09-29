@@ -16,84 +16,6 @@
   --pink: #ff6565;
 }
 
-/*Burger menu*/
-
-header nav input, header nav label{
-    display: none;
-}
-
-@media only screen and (max-width: 480px) {
-    /* Basic styling */
-    header{
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-  nav {
-    position: relative;
-  }
-  header nav input, header nav label{
-    display: inline;
-}
-header .logo{
-    justify-content: center;
-}
-
-  ul.menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: none; /* Hidden by default */
-  }
-
-  ul.menu li {
-    margin: 10px 0;
-  }
-
-  ul.menu li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-  }
-
-  input[type="checkbox"] {
-    display: none; /* Hide the checkbox */
-  }
-
-  /* Burger icon styling */
-  .burger-menu {
-    display: inline-block;
-    cursor: pointer;
-  }
-
-  .burger-menu span {
-    display: block;
-    width: 30px;
-    height: 4px;
-    background: #fff;
-    margin: 5px 0;
-    transition: all 0.3s ease;
-  }
-
-  /* Show menu when checkbox is checked */
-  input[type="checkbox"]:checked ~ ul.menu {
-    display: block;
-  }
-
-  /* Animating the burger icon to change into an "X" */
-  input[type="checkbox"]:checked + .burger-menu span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-  }
-
-  input[type="checkbox"]:checked + .burger-menu span:nth-child(2) {
-    opacity: 0;
-  }
-
-  input[type="checkbox"]:checked + .burger-menu span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
-  }
-}
-/*Burger menu end*/
-
 /* Basic reset */
 * {
   margin: 0;
@@ -179,3 +101,81 @@ main {
   max-width: 650px;
   margin: auto;
 }
+
+/*Burger menu*/
+
+header nav input, header nav label{
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  /* Basic styling */
+  header{
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+nav {
+  position: relative;
+}
+header nav input, header nav label{
+  display: inline;
+}
+header .logo{
+  justify-content: center;
+}
+
+ul.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none; /* Hidden by default */
+}
+
+ul.menu li {
+  margin: 10px 0;
+}
+
+ul.menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+}
+
+input[type="checkbox"] {
+  display: none; /* Hide the checkbox */
+}
+
+/* Burger icon styling */
+.burger-menu {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.burger-menu span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Show menu when checkbox is checked */
+input[type="checkbox"]:checked ~ ul.menu {
+  display: block;
+}
+
+/* Animating the burger icon to change into an "X" */
+input[type="checkbox"]:checked + .burger-menu span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+input[type="checkbox"]:checked + .burger-menu span:nth-child(2) {
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + .burger-menu span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+}
+/*Burger menu end*/

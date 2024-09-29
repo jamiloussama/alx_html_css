@@ -1,0 +1,257 @@
+@font-face {
+  font-family: "MainFont";
+  src: url(resources/fonts/SourceSansPro-Regular.otf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "MainFont";
+  src: url(resources/fonts/SourceSansPro-Bold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "SpecialFont";
+  src: url(resources/fonts/spincycle_ot.otf);
+}
+:root {
+  --pink: #ff6565;
+}
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "MainFont";
+  line-height: 1.5;
+}
+header,
+.hero,
+.what_we_do,
+.results {
+  max-width: 1000px;
+  margin: auto;
+}
+header {
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding-top: 35px;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+.logo img {
+  max-width: 160px;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+header nav ul li a:hover,
+header nav ul li a:focus {
+  color: var(--pink);
+}
+main {
+  background-color: rgb(62, 65, 74);
+  background-image: url(images/headphones_hero_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 471px;
+  padding-bottom: 153px;
+}
+.hero {
+  text-align: center;
+  color: #fff;
+}
+.hero h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+.hero h2 {
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 50px;
+}
+.hero a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 14px 38px;
+  border-radius: 22px;
+  border: none;
+  background: var(--pink);
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.5);
+}
+.hero a:hover,
+.hero a:active {
+  opacity: 0.9;
+}
+.hero p {
+  font-size: 16px;
+  padding-top: 80px;
+  max-width: 650px;
+  margin: auto;
+}
+
+/*Burger menu*/
+
+header nav input,
+header nav label {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  /* Basic styling */
+  header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  nav {
+    position: relative;
+  }
+  header nav input,
+  header nav label {
+    display: inline;
+  }
+  header .logo {
+    justify-content: center;
+  }
+
+  ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none; /* Hidden by default */
+  }
+
+  ul.menu li {
+    margin: 10px 0;
+  }
+
+  ul.menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+  }
+
+  input[type="checkbox"] {
+    display: none; /* Hide the checkbox */
+  }
+
+  /* Burger icon styling */
+  .burger-menu {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .burger-menu span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+
+  /* Show menu when checkbox is checked */
+  input[type="checkbox"]:checked ~ ul.menu {
+    display: block;
+  }
+
+  /* Animating the burger icon to change into an "X" */
+  input[type="checkbox"]:checked + .burger-menu span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  input[type="checkbox"]:checked + .burger-menu span:nth-child(2) {
+    opacity: 0;
+  }
+
+  input[type="checkbox"]:checked + .burger-menu span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
+/*Burger menu end*/
+
+.what_we_do {
+  text-align: center;
+  padding-top: 105px;
+}
+
+.what_we_do h1 {
+  font-size: 32px;
+  padding-bottom: 50px;
+}
+.what_we_do p {
+  font-size: 16px;
+  padding-bottom: 50px;
+  max-width: 650px;
+  margin: auto;
+}
+.what_we_do .icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 50px;
+}
+.what_we_do .icon span {
+  font-size: 100px;
+  color: var(--pink);
+}
+.what_we_do .icon h3 {
+  padding-bottom: 20px;
+}
+.what_we_do .icon p {
+  max-width: 205px;
+}
+.results_bg {
+  background-image: url(images/headphones_hero_2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 200px;
+  padding-bottom: 21px;
+  text-align: center;
+  color: #fff;
+}
+.results h1 {
+  font-size: 32px;
+  padding-bottom: 50px;
+}
+.results p{
+  font-size: 16px;
+  padding-bottom: 80px;
+  max-width: 650px;
+  margin: auto;
+}
+.results .icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 50px;
+}
+.results .icons .icon p:nth-child(2){
+  position: relative;
+  padding: 0;
+  font-size: 46px;
+  font-weight: bold;
+  top: -141px;
+}
+.results .icons .icon p:nth-child(3){
+  position: relative;
+  padding: 0;
+  top: -138px;
+}
+
+/*contact form*/
